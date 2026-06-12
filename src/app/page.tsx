@@ -680,6 +680,64 @@ export default function Home() {
           </div>
         </section>
 
+        {/* --- Latest from the Blog --- */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <AnimatedSection>
+              <h2 className="text-3xl font-extrabold font-[family-name:var(--font-montserrat)] text-center mb-2">
+                Latest from the Blog
+              </h2>
+              <p className="text-center text-[#1a2744]/60 mb-10">
+                In-depth guides, honest reviews, and strategies to grow your income.
+              </p>
+            </AnimatedSection>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                {
+                  slug: "best-web-hosting-beginners",
+                  title: "5 Best Web Hosting Sites for Beginners in 2025",
+                  excerpt: "Compare the 5 best beginner-friendly hosting providers: pricing, speed, and honest recommendations.",
+                  category: "Web Hosting",
+                  time: "8 min",
+                },
+                {
+                  slug: "start-affiliate-marketing-zero-money",
+                  title: "How to Start Affiliate Marketing with Zero Money",
+                  excerpt: "Free tools, free platforms, and a 90-day plan to earn your first commission without spending a dime.",
+                  category: "Affiliate Marketing",
+                  time: "10 min",
+                },
+                {
+                  slug: "semrush-vs-ahrefs-seo-tools",
+                  title: "Semrush vs Ahrefs: Which SEO Tool is Better?",
+                  excerpt: "An honest comparison — features, pricing, data accuracy, and which tool is right for your business.",
+                  category: "SEO Tools",
+                  time: "12 min",
+                },
+              ].map((post) => (
+                <a key={post.slug} href={`/blog/${post.slug}`} className="group block bg-[#fafaf8] border border-gray-200 rounded-xl p-6 hover:border-[#3b82f6] hover:shadow-lg transition-all duration-300">
+                  <div className="flex items-center gap-2 text-xs text-[#1a2744]/50 mb-3">
+                    <span className="bg-[#3b82f6]/10 text-[#3b82f6] px-2.5 py-1 rounded-full font-medium">{post.category}</span>
+                    <span>{post.time} read</span>
+                  </div>
+                  <h3 className="font-bold font-[family-name:var(--font-montserrat)] text-[#1a2744] group-hover:text-[#3b82f6] transition-colors mb-2">
+                    {post.title}
+                  </h3>
+                  <p className="text-sm text-[#1a2744]/70 leading-relaxed">{post.excerpt}</p>
+                  <span className="inline-block mt-3 text-sm font-medium text-[#3b82f6] group-hover:translate-x-1 transition-transform">
+                    Read Article &rarr;
+                  </span>
+                </a>
+              ))}
+            </div>
+            <div className="text-center mt-8">
+              <a href="/blog" className="inline-flex items-center gap-2 text-sm font-medium text-[#3b82f6] hover:text-[#1a2744] transition-colors">
+                View All Articles <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* --- Newsletter --- */}
         <section id="newsletter" className="py-16 bg-gradient-to-br from-[#1a2744] to-[#2d3f5e] text-white">
           <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -790,8 +848,11 @@ export default function Home() {
                 <a href="#newsletter" className="block hover:text-white transition-colors">
                   Newsletter
                 </a>
-                <a href="#about" className="block hover:text-white transition-colors">
+                <a href="/about" className="block hover:text-white transition-colors">
                   About Joel
+                </a>
+                <a href="/blog" className="block hover:text-white transition-colors">
+                  Blog
                 </a>
               </div>
             </div>
@@ -799,9 +860,10 @@ export default function Home() {
 
           <div className="mt-10 pt-6 border-t border-white/10 text-center text-xs text-blue-200/40">
             &copy; {new Date().getFullYear()} Joel Affiliates. All rights reserved. |{" "}
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a> |{" "}
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a> |{" "}
-            <a href="#" className="hover:text-white transition-colors">Affiliate Disclosure</a>
+            <a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a> |{" "}
+            <a href="/affiliate-disclosure" className="hover:text-white transition-colors">Affiliate Disclosure</a> |{" "}
+            <a href="/about" className="hover:text-white transition-colors">About</a> |{" "}
+            <a href="/blog" className="hover:text-white transition-colors">Blog</a>
           </div>
         </div>
       </footer>
