@@ -18,7 +18,7 @@ import {
   Shield,
   CheckCircle2,
   DollarSign,
-  Home,
+  Home as HomeIcon,
   Heart,
   ShoppingCart,
   Monitor,
@@ -28,7 +28,7 @@ import { niches, affiliatePrograms, type Program, type Niche } from "@/lib/affil
 
 // --- Icon map for niches ---
 const iconComponents: Record<string, React.ComponentType<{ className?: string }>> = {
-  Home,
+  Home: HomeIcon,
   Heart,
   DollarSign,
   ShoppingCart,
