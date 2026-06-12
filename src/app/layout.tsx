@@ -15,31 +15,33 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Joel Ssengendo | Digital Marketing Tools & Reviews",
+  title: "Joel Affiliates | Top Products Across 5 Niches & 4 Affiliate Programs",
   description:
-    "Helping entrepreneurs find the best marketing tools. Honest reviews, comparisons & deals on email, SEO, social media, AI, and design tools for your business.",
+    "Honest reviews and exclusive deals on home & living, health & wellness, money & finance, e-commerce, and digital tools. Products from Amazon, ShareASale, ClickBank, and Shopify — clearly labeled with commission rates.",
   keywords: [
-    "digital marketing tools",
-    "marketing software reviews",
-    "email marketing tools",
-    "SEO tools",
-    "AI marketing",
-    "Canva",
-    "Semrush",
-    "Shopify",
-    "HubSpot",
     "affiliate marketing",
-    "SaaS reviews",
-    "marketing tool comparisons",
+    "best products 2026",
+    "home gadgets reviews",
+    "health supplements reviews",
+    "finance tools reviews",
+    "Shopify affiliate",
+    "Amazon Associates",
+    "ShareASale",
+    "ClickBank",
+    "commission rates",
+    "product reviews",
+    "side hustle tools",
+    "make money online",
+    "digital marketing tools",
   ],
   authors: [{ name: "Joel Ssengendo" }],
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "Joel Ssengendo | Digital Marketing Tools & Reviews",
+    title: "Joel Affiliates | Top Products Across 5 Niches",
     description:
-      "Honest reviews & comparisons of the best digital marketing tools for entrepreneurs.",
+      "Honest reviews across home, health, finance, e-commerce, and digital tools. 4 affiliate programs. Real commissions.",
     type: "website",
   },
 };
