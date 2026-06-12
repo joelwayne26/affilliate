@@ -22,7 +22,7 @@ import {
   Heart,
   ShoppingCart,
   Monitor,
-  ImageIcon,
+  ImagePlus,
 } from "lucide-react";
 import { niches, affiliatePrograms, type Program, type Niche } from "@/lib/affiliate-data";
 
@@ -149,7 +149,7 @@ function ProductCard({ product, nicheColor }: { product: any; nicheColor: string
           />
         ) : (
           <div className="w-full h-full flex flex-col items-center justify-center text-gray-300">
-            <ImageIcon className="w-10 h-10 mb-2" />
+            <ImagePlus className="w-10 h-10 mb-2" />
             <span className="text-xs">Add image to {product.image || "/products/your-image.jpg"}</span>
           </div>
         )}
