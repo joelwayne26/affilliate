@@ -16,33 +16,33 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Joel Affiliates | Top Products Across 5 Niches & 4 Affiliate Programs",
+  title: "Joel Affiliates | Health, Pets & Spiritual Products on Digistore24",
   description:
-    "Honest reviews and exclusive deals on home & living, health & wellness, money & finance, e-commerce, and digital tools. Products from Amazon, ShareASale, ClickBank, and Shopify — clearly labeled with commission rates.",
+    "Honest reviews and exclusive deals on health & fitness, pet care, and spiritual growth products. All from Digistore24 with commissions up to 90%. Pinterest-optimized.",
   keywords: [
     "affiliate marketing",
-    "best products 2026",
-    "home gadgets reviews",
+    "Digistore24",
     "health supplements reviews",
-    "finance tools reviews",
-    "Shopify affiliate",
-    "Amazon Associates",
-    "ShareASale",
-    "ClickBank",
-    "commission rates",
-    "product reviews",
-    "side hustle tools",
+    "pet care products",
+    "spiritual manifestation",
+    "Pinterest affiliate marketing",
+    "high commission products",
+    "PrimeBiome",
+    "Kerassentials",
+    "Soulmate Sketch",
+    "brain training dogs",
+    "manifestation products",
+    "weight loss supplements",
     "make money online",
-    "digital marketing tools",
   ],
   authors: [{ name: "Joel Ssengendo" }],
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "Joel Affiliates | Top Products Across 5 Niches",
+    title: "Joel Affiliates | Health, Pets & Spiritual Products",
     description:
-      "Honest reviews across home, health, finance, e-commerce, and digital tools. 4 affiliate programs. Real commissions.",
+      "Honest reviews across health, pets, and spiritual niches. Digistore24 products with up to 90% commissions. Pinterest-optimized.",
     type: "website",
   },
 };

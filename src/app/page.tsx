@@ -17,22 +17,18 @@ import {
   TrendingUp,
   Shield,
   CheckCircle2,
-  DollarSign,
-  Home as HomeIcon,
   Heart,
-  ShoppingCart,
-  Monitor,
+  PawPrint,
+  Sparkles,
   ImagePlus,
 } from "lucide-react";
 import { niches, affiliatePrograms, type Program, type Niche } from "@/lib/affiliate-data";
 
 // --- Icon map for niches ---
 const iconComponents: Record<string, React.ComponentType<{ className?: string }>> = {
-  Home: HomeIcon,
   Heart,
-  DollarSign,
-  ShoppingCart,
-  Monitor,
+  PawPrint,
+  Sparkles,
 };
 
 // --- Scroll Animation Hook ---
@@ -185,9 +181,16 @@ function ProductCard({ product, nicheColor }: { product: any; nicheColor: string
         </p>
 
         {/* Best For */}
-        <p className="text-xs text-[#1a2744]/50 mb-3">
+        <p className="text-xs text-[#1a2744]/50 mb-1">
           <span className="font-semibold">Best for:</span> {product.bestFor}
         </p>
+
+        {/* Pinterest SEO Keywords */}
+        {product.pinterestSEO && (
+          <p className="text-xs text-purple-500/70 mb-3">
+            <span className="font-semibold">Pinterest keywords:</span> {product.pinterestSEO}
+          </p>
+        )}
 
         {/* Rating */}
         <div className="mb-4">
@@ -309,17 +312,17 @@ const faqs = [
   {
     question: "Which affiliate programs do you work with?",
     answer:
-      "I partner with Amazon Associates, ShareASale, ClickBank, and Shopify Affiliates. Each program is clearly labeled on every product so you know exactly where your purchase comes from. Different programs offer different products and commission rates.",
+      "I partner with Digistore24 -- one of the world's leading digital product affiliate platforms. Every product on this site is from Digistore24, clearly labeled with commission rates from 50% to 90%. Digital products mean instant delivery and instant commissions.",
   },
   {
     question: "How do I start making money with affiliate marketing?",
     answer:
-      "Start by choosing a niche you are passionate about. Sign up for the affiliate programs listed here (Amazon, ShareASale, ClickBank, Shopify). Create content -- blog posts, Pinterest pins, social media -- that genuinely helps people. Insert your affiliate links naturally. Be patient and consistent.",
+      "Start by choosing a niche you are passionate about. Sign up for Digistore24 (free and instant). Browse the marketplace for products in your niche. Create Pinterest pins and blog content that genuinely helps people. Insert your affiliate links naturally. Be patient and consistent -- spiritual and health pins compound over time on Pinterest.",
   },
   {
     question: "Which niche should I start with for fastest results?",
     answer:
-      "Home & Living and Health & Wellness tend to have the fastest results because they have mass appeal and visual products perfect for Pinterest. Finance and Digital Tools take longer but pay higher commissions per sale.",
+      "Health & Fitness and Spiritual niches convert fastest on Pinterest. Health supplements like PrimeBiome ride the 'glassy skin' trend, while spiritual products like Soulmate Sketch are inherently visual and shareable. Pets is a close third -- cute animal content goes viral effortlessly on Pinterest.",
   },
 ];
 
@@ -432,18 +435,17 @@ export default function Home() {
             <div className="max-w-3xl">
               <Badge className="mb-6 bg-[#3b82f6]/20 text-[#60a5fa] border-[#3b82f6]/30 hover:bg-[#3b82f6]/30 transition-colors duration-300 animate-fade-in-up">
                 <Zap className="w-3 h-3 mr-1" />
-                5 Niches / 4 Affiliate Programs / 1 Trusted Source
+                3 Niches / Digistore24 / Up to 90% Commission
               </Badge>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] mb-6 font-[family-name:var(--font-montserrat)] animate-fade-in-up delay-200">
                 Find the <span className="gradient-text">Best Products</span>{" "}
-                for Your Life & Business
+                for Health, Pets & Spirit
               </h2>
               <p className="text-lg sm:text-xl text-blue-100/90 mb-8 leading-relaxed max-w-2xl animate-fade-in-up delay-400">
-                Honest reviews and exclusive deals across home, health, finance, e-commerce, and digital tools.
-                Every product tagged by affiliate program so you know exactly where you are buying.
+                Honest reviews and exclusive deals across health & fitness, pets, and spiritual growth. All products from Digistore24 with commissions up to 90%. Pinterest-optimized for maximum reach.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-600">
-                <a href="#home-living">
+                <a href="#health-fitness">
                   <Button
                     size="lg"
                     className="bg-[#f59e0b] text-[#1a2744] hover:bg-[#d97706] font-bold text-lg px-8 w-full sm:w-auto transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-[#f59e0b]/20"
@@ -482,10 +484,10 @@ export default function Home() {
               {/* Stats Row */}
               <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 animate-fade-in-up delay-1000">
                 {[
-                  { label: "Products Reviewed", value: "27+", Icon: CheckCircle2 },
-                  { label: "Max Commission", value: "$1,000", Icon: DollarSign },
-                  { label: "Affiliate Programs", value: "4", Icon: Shield },
-                  { label: "Niches Covered", value: "5", Icon: TrendingUp },
+                  { label: "Products", value: "17", Icon: CheckCircle2 },
+                  { label: "Max Commission", value: "90%", Icon: Zap },
+                  { label: "Niches", value: "3", Icon: TrendingUp },
+                  { label: "Platform", value: "D24", Icon: Shield },
                 ].map((stat, i) => (
                   <div key={i} className="text-center p-3 rounded-xl glass">
                     <stat.Icon className="w-5 h-5 mx-auto mb-1 text-[#f59e0b]" />
@@ -533,19 +535,19 @@ export default function Home() {
           </div>
         </section>
 
-        {/* --- Affiliate Programs Overview --- */}
+        {/* --- Digistore24 Program Overview --- */}
         <section className="py-12 bg-[#fafaf8]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <AnimatedSection>
               <div className="text-center mb-10">
                 <h2 className="text-3xl font-extrabold text-[#1a2744] font-[family-name:var(--font-montserrat)] mb-2">
-                  4 Trusted Affiliate Programs
+                  Powered by Digistore24
                 </h2>
-                <p className="text-[#1a2744]/60">Every product is clearly labeled so you know where your purchase comes from</p>
+                <p className="text-[#1a2744]/60">All products from one trusted platform -- up to 90% commissions, 180-day cookies, instant payouts</p>
               </div>
             </AnimatedSection>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="max-w-2xl mx-auto">
               {(Object.keys(affiliatePrograms) as Program[]).map((key, i) => {
                 const prog = affiliatePrograms[key];
                 const productCount = niches.reduce(
@@ -555,26 +557,31 @@ export default function Home() {
                 return (
                   <AnimatedSection key={key} animation="scale" delay={i * 100}>
                     <div
-                      className="p-5 rounded-2xl border-2 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                      className="p-6 rounded-2xl border-2 transition-all duration-300 hover:shadow-lg"
                       style={{
                         borderColor: `${prog.color}20`,
                         backgroundColor: prog.bgColor,
                       }}
                     >
-                      <div
-                        className="w-10 h-10 rounded-xl flex items-center justify-center mb-3 text-white font-bold text-lg"
-                        style={{ backgroundColor: prog.color }}
-                      >
-                        {key === "amazon" ? "A" : key === "shareasale" ? "S" : key === "clickbank" ? "C" : "S"}
-                      </div>
-                      <h3 className="font-bold text-[#1a2744] mb-1 font-[family-name:var(--font-montserrat)]">
-                        {prog.name}
-                      </h3>
-                      <p className="text-xs text-[#1a2744]/60 mb-3">{prog.description}</p>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs font-semibold" style={{ color: prog.color }}>
-                          {productCount} products
-                        </span>
+                      <div className="flex items-center gap-4">
+                        <div
+                          className="w-14 h-14 rounded-xl flex items-center justify-center text-white font-bold text-xl"
+                          style={{ backgroundColor: prog.color }}
+                        >
+                          D24
+                        </div>
+                        <div>
+                          <h3 className="font-bold text-[#1a2744] font-[family-name:var(--font-montserrat)]">
+                            {prog.name}
+                          </h3>
+                          <p className="text-sm text-[#1a2744]/60">{prog.description}</p>
+                        </div>
+                        <div className="ml-auto text-right">
+                          <span className="text-sm font-semibold" style={{ color: prog.color }}>
+                            {productCount} products
+                          </span>
+                          <p className="text-xs text-[#1a2744]/40">across {niches.length} niches</p>
+                        </div>
                       </div>
                     </div>
                   </AnimatedSection>
@@ -606,19 +613,19 @@ export default function Home() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 {
-                  Icon: Monitor,
+                  Icon: Heart,
                   title: "Browse by Niche",
-                  desc: "Explore products across 5 niches -- from home gadgets to business tools. Each niche is tagged with its affiliate program.",
+                  desc: "Explore products across 3 high-converting niches -- Health & Fitness, Pets, and Spiritual. Each optimized for Pinterest.",
                 },
                 {
                   Icon: Shield,
-                  title: "See the Program",
-                  desc: "Every product shows which affiliate program it is from -- Amazon, ShareASale, ClickBank, or Shopify. Full transparency.",
+                  title: "See the Commission",
+                  desc: "Every product shows its Digistore24 commission rate upfront -- from 50% to 90%. Full transparency on every listing.",
                 },
                 {
-                  Icon: DollarSign,
-                  title: "Know the Commission",
-                  desc: "Commission rates are displayed upfront. From 4.5% on Amazon to 75% on ClickBank, you know exactly what is earned.",
+                  Icon: TrendingUp,
+                  title: "Pinterest-Optimized",
+                  desc: "Every product is selected for its Pinterest potential. We show you the exact SEO keywords that drive traffic and sales.",
                 },
                 {
                   Icon: CheckCircle2,
@@ -786,7 +793,7 @@ export default function Home() {
         <section className="py-8 bg-gray-50 border-t border-gray-100">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <p className="text-xs text-[#1a2744]/50 leading-relaxed text-center">
-              <strong>Affiliate Disclosure:</strong> Some links on this website are affiliate links. This means if you click on the link and purchase the item, I will receive an affiliate commission at no extra cost to you. I only recommend products or services I use personally or believe will add value to my readers. As an Amazon Associate, I earn from qualifying purchases. As a ShareASale affiliate, I earn commissions from qualifying purchases through links on this site.
+              <strong>Affiliate Disclosure:</strong> Some links on this website are affiliate links. This means if you click on the link and purchase the item, I will receive an affiliate commission at no extra cost to you. I only recommend products I have personally researched or believe will add value to my readers. All products on this site are from Digistore24, and I earn commissions from qualifying purchases through links on this site.
             </p>
           </div>
         </section>
@@ -805,7 +812,7 @@ export default function Home() {
                 <span className="font-bold font-[family-name:var(--font-montserrat)]">Joel Affiliates</span>
               </div>
               <p className="text-sm text-blue-200/60 leading-relaxed">
-                Honest reviews and exclusive deals across 5 niches and 4 trusted affiliate programs.
+                Honest reviews and exclusive deals across health, pets, and spiritual niches. All powered by Digistore24.
               </p>
             </div>
 
@@ -827,14 +834,12 @@ export default function Home() {
 
             {/* Programs */}
             <div>
-              <h4 className="font-bold mb-4 text-[#f59e0b]">Affiliate Programs</h4>
+              <h4 className="font-bold mb-4 text-[#f59e0b]">Programs</h4>
               <div className="space-y-2 text-sm text-blue-200/60">
-                {(Object.keys(affiliatePrograms) as Program[]).map((key) => (
-                  <div key={key} className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: affiliatePrograms[key].color }} />
-                    {affiliatePrograms[key].name}
-                  </div>
-                ))}
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full" style={{ backgroundColor: affiliatePrograms.digistore24.color }} />
+                  Digistore24
+                </div>
               </div>
             </div>
 
