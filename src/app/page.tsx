@@ -20,6 +20,7 @@ import {
   Heart,
   PawPrint,
   Sparkles,
+  HeartHandshake,
   ImagePlus,
 } from "lucide-react";
 import { niches, affiliatePrograms, type Program, type Niche } from "@/lib/affiliate-data";
@@ -29,6 +30,9 @@ const iconComponents: Record<string, React.ComponentType<{ className?: string }>
   Heart,
   PawPrint,
   Sparkles,
+  TrendingUp,
+  Shield,
+  HeartHandshake,
 };
 
 // --- Scroll Animation Hook ---
